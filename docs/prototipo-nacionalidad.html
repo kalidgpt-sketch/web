@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prototipo · Nacionalidad</title>
+<style>
+:root{--bg:#07130f;--bg2:#0c1f19;--card:#0f241d;--line:#1d3b31;--ink:#e8f3ee;--mut:#8fb0a4;--a:#2fd38f;--b:#3aa0ff;--warn:#f2b84b;--bad:#ff7a8a;--sh:0 10px 30px rgba(0,0,0,.35)}
+[data-theme=light]{--bg:#f3f8f5;--bg2:#e8f1ed;--card:#fff;--line:#d3e3dc;--ink:#0b2a21;--mut:#4d6b60;--a:#0c8f5b;--b:#1566c9;--warn:#a86f00;--bad:#c2243a;--sh:0 10px 30px rgba(10,60,40,.10)}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 600px at 10% -10%,color-mix(in srgb,var(--a) 14%,transparent),transparent),radial-gradient(900px 500px at 100% 0,color-mix(in srgb,var(--b) 14%,transparent),transparent),var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh}
+h1,h2,h3,.serif{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;letter-spacing:-.02em;margin:0}
+em{font-style:normal;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.wrap{max-width:1240px;margin:0 auto;padding:28px 16px 60px}
+.bar-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.eyebrow{color:var(--a);font-weight:700;letter-spacing:.14em;font-size:.75rem;text-transform:uppercase}
+.tbtn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:8px 14px;cursor:pointer;font:inherit;font-size:.9rem}
+.tools{display:flex;gap:8px}
+.intro h1{font-size:clamp(1.8rem,5vw,3rem);line-height:1.1;margin:10px 0 6px}
+.intro p{color:var(--mut);max-width:680px;margin:0 0 24px}
+.stage{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:26px;justify-items:center}
+.label{color:var(--mut);font-size:.82rem;text-align:center;margin-bottom:8px}
+.phone{width:100%;max-width:370px;height:740px;border:1px solid var(--line);border-radius:34px;background:var(--bg);box-shadow:var(--sh);overflow:hidden;display:flex;flex-direction:column;position:relative}
+.screen{flex:1;overflow:auto;padding:22px 18px 12px}
+.nav{display:flex;justify-content:space-around;border-top:1px solid var(--line);background:var(--card);padding:10px 4px 14px}
+.nav a{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:.7rem;color:var(--mut);text-decoration:none;min-width:64px}
+.nav a.on{color:var(--a);font-weight:700}
+.nav svg{width:22px;height:22px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.hi{font-size:1.5rem;line-height:1.15}
+.sub{color:var(--mut);font-size:.88rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:var(--sh);margin-top:14px;animation:up .6s both}
+.card:nth-of-type(2){animation-delay:.08s}.card:nth-of-type(3){animation-delay:.16s}.card:nth-of-type(4){animation-delay:.24s}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.ring{--p:38;--c:var(--a);flex:none;width:84px;height:84px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--c) calc(var(--p)*1%),var(--bg2) 0);position:relative}
+.ring::after{content:attr(data-s);position:absolute;inset:7px;border-radius:50%;background:var(--card);display:grid;place-items:center;font:700 1.25rem Georgia,serif}
+.ring.big{width:130px;height:130px}.ring.big::after{inset:10px;font-size:2rem}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;animation:up .6s .2s both}
+.kpi b{display:block;font:700 1.9rem/1.1 Georgia,serif;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.kpi span{color:var(--mut);font-size:.8rem}
+.tag{border:1px solid var(--line);border-radius:99px;padding:2px 10px;font-size:.74rem;color:var(--mut);display:inline-block}
+.tag.g{color:var(--a);border-color:var(--a)}.tag.w{color:var(--warn);border-color:var(--warn)}
+.btn{display:block;width:100%;text-align:center;background:linear-gradient(90deg,var(--a),var(--b));color:#04140e;font-weight:700;border:0;border-radius:14px;padding:14px;font:700 1rem system-ui;cursor:pointer;margin-top:14px;min-height:50px}
+.btn.o{background:none;border:1px solid var(--line);color:var(--ink);font-weight:600}
+.steps{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px}
+.steps li{display:flex;gap:10px;align-items:center;font-size:.92rem}
+.dot{flex:none;width:26px;height:26px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-size:.75rem;color:var(--mut)}
+.dot.ok{background:var(--a);border-color:var(--a);color:#04140e;font-weight:800}
+.dot.now{border-color:var(--a);color:var(--a);font-weight:800}
+.prog{height:10px;border-radius:99px;background:var(--bg2);overflow:hidden}
+.prog i{display:block;height:100%;width:28%;border-radius:99px;background:linear-gradient(90deg,var(--a),var(--b));transition:width 1s}
+.q{font:700 1.3rem/1.3 Georgia,serif;margin:16px 0 6px}
+.opt{display:flex;gap:12px;align-items:center;width:100%;text-align:start;background:var(--card);color:var(--ink);border:1.5px solid var(--line);border-radius:16px;padding:14px;margin-top:10px;font:inherit;cursor:pointer;min-height:56px;transition:transform .2s,border-color .2s}
+.opt:hover{transform:translateY(-2px);border-color:var(--a)}
+.opt .l{flex:none;width:30px;height:30px;border-radius:50%;background:var(--bg2);display:grid;place-items:center;font-weight:700;font-size:.85rem}
+.opt.ok{border-color:var(--a);background:color-mix(in srgb,var(--a) 14%,var(--card))}
+.opt.ok .l{background:var(--a);color:#04140e}
+.opt.bad{border-color:var(--bad)}
+.why{border-inline-start:3px solid var(--a);background:var(--bg2);border-radius:12px;padding:10px 12px;font-size:.88rem;margin-top:12px}
+.audio{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:8px 14px;font:inherit;font-size:.85rem;cursor:pointer;min-height:40px}
+.bar{display:grid;grid-template-columns:104px 1fr 40px;gap:10px;align-items:center;margin:10px 0;font-size:.86rem}
+.bar i{display:block;height:12px;border-radius:99px;background:linear-gradient(90deg,var(--a),var(--b))}
+.bar .tr{background:var(--bg2);border-radius:99px;overflow:hidden}
+.bar b{text-align:end}
+.bar.low i{background:linear-gradient(90deg,var(--warn),var(--bad))}
+.ill{width:100%;height:110px;border-radius:16px;margin-top:12px;background:linear-gradient(135deg,color-mix(in srgb,var(--a) 22%,var(--card)),color-mix(in srgb,var(--b) 22%,var(--card)));display:grid;place-items:center;overflow:hidden}
+.note{color:var(--mut);font-size:.8rem;text-align:center;margin-top:30px}
+:focus-visible{outline:3px solid var(--b);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <div class="bar-top">
+  <span class="eyebrow">Prototipo estático · Nacionalidad por residencia</span>
+  <div class="tools">
+   <button class="tbtn" id="lg">العربية</button>
+   <button class="tbtn" id="th">Modo claro</button>
+  </div>
+ </div>
+ <div class="intro">
+  <h1>Tu camino a la <em>nacionalidad</em>, paso a paso</h1>
+  <p>Tres pantallas de ejemplo para aprobar el diseño: inicio, test y resultados. El contenido es de relleno y no está verificado; el diseño sí es el propuesto. Prueba el botón de idioma para ver cómo se comporta en árabe (de derecha a izquierda).</p>
+ </div>
+
+ <div class="stage">
+
+  <!-- Pantalla 1 -->
+  <div>
+   <div class="label">1 · Inicio</div>
+   <div class="phone">
+    <div class="screen">
+     <div class="row">
+      <div><div class="sub" data-t="hola">Hola, Amina</div><h2 class="hi" data-t="titulo">Tu preparación</h2></div>
+      <span class="tag g" data-t="dias">Examen en 42 días</span>
+     </div>
+     <div class="card row">
+      <div class="ring" style="--p:38" data-s="38%"></div>
+      <div style="flex:1">
+       <b data-t="global">Progreso global</b>
+       <div class="sub" data-t="globalsub">Vas bien. Un test corto hoy te acerca al examen.</div>
+      </div>
+     </div>
+     <div class="kpis">
+      <div class="kpi"><b>CCSE</b><span data-t="k1">Conocimientos de España</span></div>
+      <div class="kpi"><b>DELE A2</b><span data-t="k2">Prueba de idioma</span></div>
+     </div>
+     <div class="card">
+      <div class="row"><h3 style="font-size:1.1rem" data-t="tramite">El trámite, paso a paso</h3><span class="tag w">2/5</span></div>
+      <ul class="steps">
+       <li><span class="dot ok">✓</span><span data-t="s1">Reunir documentos</span></li>
+       <li><span class="dot ok">✓</span><span data-t="s2">Reservar los exámenes</span></li>
+       <li><span class="dot now">3</span><b data-t="s3">Preparar el CCSE</b></li>
+       <li><span class="dot">4</span><span data-t="s4">Preparar el DELE A2</span></li>
+       <li><span class="dot">5</span><span data-t="s5">Presentar la solicitud</span></li>
+      </ul>
+     </div>
+     <button class="btn" data-t="cta">Hacer un test de 5 minutos</button>
+    </div>
+    <nav class="nav">
+     <a class="on" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8v10H3z"/></svg><span data-t="n1">Inicio</span></a>
+     <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4zM8 9h8M8 13h5"/></svg><span data-t="n2">Tests</span></a>
+     <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5m6 14V9m6 10v-6m4 6H2"/></svg><span data-t="n3">Progreso</span></a>
+     <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 15-5 16 0"/></svg><span data-t="n4">Perfil</span></a>
+    </nav>
+   </div>
+  </div>
+
+  <!-- Pantalla 2 -->
+  <div>
+   <div class="label">2 · Test</div>
+   <div class="phone">
+    <div class="screen">
+     <div class="row"><span class="tag g">CCSE · <span data-t="bloque">Gobierno</span></span><span class="sub">7 / 25</span></div>
+     <div class="prog" style="margin-top:12px"><i></i></div>
+     <div class="ill" aria-hidden="true">
+      <svg viewBox="0 0 200 90" width="200" height="90"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#2fd38f"/><stop offset="1" stop-color="#3aa0ff"/></linearGradient></defs><path d="M20 80h160M30 80V40l70-26 70 26v40M55 80V50m30 30V50m30 30V50m30 30V50" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+     </div>
+     <div class="q" data-t="q">¿Cuál es la capital de España?</div>
+     <button class="audio" aria-label="Escuchar la pregunta">🔊 <span data-t="escuchar">Escuchar</span></button>
+     <button class="opt"><span class="l">A</span><span>Barcelona</span></button>
+     <button class="opt ok"><span class="l">B</span><span>Madrid</span></button>
+     <button class="opt"><span class="l">C</span><span>Sevilla</span></button>
+     <div class="why"><b data-t="porque">Por qué:</b> <span data-t="expl">Texto de ejemplo. Aquí irá la explicación breve y la referencia al manual oficial.</span><br><span class="tag" style="margin-top:6px" data-t="fuente">Fuente: manual oficial (por verificar)</span></div>
+     <button class="btn" data-t="sig">Siguiente</button>
+    </div>
+    <nav class="nav">
+     <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8v10H3z"/></svg><span data-t="n1">Inicio</span></a>
+     <a class="on" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4zM8 9h8M8 13h5"/></svg><span data-t="n2">Tests</span></a>
+     <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5m6 14V9m6 10v-6m4 6H2"/></svg><span data-t="n3">Progreso</span></a>
+     <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 15-5 16 0"/></svg><span data-t="n4">Perfil</span></a>
+    </nav>
+   </div>
+  </div>
+
+  <!-- Pantalla 3 -->
+  <div>
+   <div class="label">3 · Resultados</div>
+   <div class="phone">
+    <div class="screen">
+     <div class="sub" style="text-align:center" data-t="r0">Simulacro de CCSE</div>
+     <div style="display:grid;place-items:center;margin-top:12px"><div class="ring big" style="--p:72" data-s="72%"></div></div>
+     <h2 style="text-align:center;margin-top:12px;font-size:1.5rem" data-t="r1">¡Vas por buen camino!</h2>
+     <p class="sub" style="text-align:center;margin:4px 0 0" data-t="r2">Resultado de ejemplo. Repasa los bloques más bajos.</p>
+     <div class="card">
+      <h3 style="font-size:1.05rem" data-t="r3">Por bloques</h3>
+      <div class="bar"><span data-t="b1">Gobierno</span><div class="tr"><i style="width:85%"></i></div><b>85%</b></div>
+      <div class="bar"><span data-t="b2">Derechos</span><div class="tr"><i style="width:78%"></i></div><b>78%</b></div>
+      <div class="bar"><span data-t="b3">Territorio</span><div class="tr"><i style="width:70%"></i></div><b>70%</b></div>
+      <div class="bar low"><span data-t="b4">Cultura</span><div class="tr"><i style="width:52%"></i></div><b>52%</b></div>
+      <div class="bar low"><span data-t="b5">Sociedad</span><div class="tr"><i style="width:48%"></i></div><b>48%</b></div>
+     </div>
+     <button class="btn" data-t="r4">Repasar mis errores</button>
+     <button class="btn o" data-t="r5">Repetir el simulacro</button>
+    </div>
+    <nav class="nav">
+     <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8v10H3z"/></svg><span data-t="n1">Inicio</span></a>
+     <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4zM8 9h8M8 13h5"/></svg><span data-t="n2">Tests</span></a>
+     <a class="on" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5m6 14V9m6 10v-6m4 6H2"/></svg><span data-t="n3">Progreso</span></a>
+     <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 15-5 16 0"/></svg><span data-t="n4">Perfil</span></a>
+    </nav>
+   </div>
+  </div>
+
+ </div>
+ <p class="note">Prototipo de diseño. Textos, cifras y nombres son de ejemplo y no están verificados con fuentes oficiales. Las ilustraciones son provisionales; las definitivas deben tener licencia clara.</p>
+</div>
+
+<script>
+const T={
+es:{hola:"Hola, Amina",titulo:"Tu preparación",dias:"Examen en 42 días",global:"Progreso global",globalsub:"Vas bien. Un test corto hoy te acerca al examen.",k1:"Conocimientos de España",k2:"Prueba de idioma",tramite:"El trámite, paso a paso",s1:"Reunir documentos",s2:"Reservar los exámenes",s3:"Preparar el CCSE",s4:"Preparar el DELE A2",s5:"Presentar la solicitud",cta:"Hacer un test de 5 minutos",n1:"Inicio",n2:"Tests",n3:"Progreso",n4:"Perfil",bloque:"Gobierno",q:"¿Cuál es la capital de España?",escuchar:"Escuchar",porque:"Por qué:",expl:"Texto de ejemplo. Aquí irá la explicación breve y la referencia al manual oficial.",fuente:"Fuente: manual oficial (por verificar)",sig:"Siguiente",r0:"Simulacro de CCSE",r1:"¡Vas por buen camino!",r2:"Resultado de ejemplo. Repasa los bloques más bajos.",r3:"Por bloques",b1:"Gobierno",b2:"Derechos",b3:"Territorio",b4:"Cultura",b5:"Sociedad",r4:"Repasar mis errores",r5:"Repetir el simulacro"},
+ar:{hola:"مرحبًا، أمينة",titulo:"استعدادك",dias:"الامتحان بعد 42 يومًا",global:"التقدم العام",globalsub:"أنت تتقدم جيدًا. اختبار قصير اليوم يقرّبك من الامتحان.",k1:"معرفة إسبانيا",k2:"اختبار اللغة",tramite:"الإجراءات خطوة بخطوة",s1:"جمع الوثائق",s2:"حجز الامتحانات",s3:"التحضير لـ CCSE",s4:"التحضير لـ DELE A2",s5:"تقديم الطلب",cta:"اختبار لمدة 5 دقائق",n1:"الرئيسية",n2:"اختبارات",n3:"التقدم",n4:"الملف",bloque:"الحكومة",q:"ما هي عاصمة إسبانيا؟",escuchar:"استمع",porque:"السبب:",expl:"نص تجريبي. هنا سيظهر الشرح المختصر والمرجع من الدليل الرسمي.",fuente:"المصدر: الدليل الرسمي (للتحقق)",sig:"التالي",r0:"محاكاة اختبار CCSE",r1:"أنت على الطريق الصحيح!",r2:"نتيجة تجريبية. راجع الأقسام الأضعف.",r3:"حسب القسم",b1:"الحكومة",b2:"الحقوق",b3:"الأقاليم",b4:"الثقافة",b5:"المجتمع",r4:"مراجعة أخطائي",r5:"إعادة المحاكاة"}
+};
+let lang="es";
+document.getElementById('lg').onclick=function(){
+ lang=lang==="es"?"ar":"es";
+ document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+ document.documentElement.lang=lang;
+ this.textContent=lang==="ar"?"Español":"العربية";
+ document.querySelectorAll('[data-t]').forEach(e=>{e.textContent=T[lang][e.dataset.t]});
+};
+document.getElementById('th').onclick=function(){
+ const d=document.documentElement,l=d.dataset.theme==="light";
+ d.dataset.theme=l?"dark":"light";this.textContent=l?"Modo claro":"Modo oscuro";
+};
+</script>
+</body>
+</html>
