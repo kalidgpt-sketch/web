@@ -76,7 +76,7 @@ Opciones legales `[opinión]`:
 - `[dato]` **Menores de 18 años y personas con la capacidad modificada judicialmente:** no hacen las pruebas. Acreditan la integración con certificados del centro escolar, de formación, residencia, acogida o educación especial. Fuente: RD 1004/2015, art. 5.2 y art. 6.6.
 - `[dato]` La exención por ser nacional de un país hispanohablante o tener un DELE A2 **solo vale para el DELE**, no para el CCSE. Fuente: RD 1004/2015 art. 6.5 (solo habla de «la prueba de examen DELE»).
 - `[estimación]` Por tanto, casi todos los adultos que piden la nacionalidad por residencia tienen que aprobar el CCSE, también los latinoamericanos. Es el público más amplio del proyecto.
-- `PENDIENTE DE VERIFICAR`: si existe hoy una **dispensa** del CCSE para personas analfabetas o mayores. Hay un «Proyecto de Orden Ministerial» del Ministerio de Justicia sobre la dispensa ([PDF](https://www.mjusticia.gob.es/es/AreaTematica/ActividadLegislativa/Documents/1292429192230-Proyecto_OM_dispensa_para_nacionalidad_por_residencia_TEXTO.PDF)), pero no he comprobado si llegó a aprobarse. Lo trato en `tramite.md`.
+- `[dato]` **Dispensa:** las personas que no saben leer ni escribir o con dificultades de aprendizaje pueden pedir al Ministerio de Justicia la dispensa del CCSE y del DELE (o pruebas adaptadas) antes de solicitar la nacionalidad. Quien tenga la ESO hecha en España tampoco tiene que hacer las pruebas. La validez del certificado CCSE es de **4 años** (dato oficial). Fuente: [Orden JUS/1625/2016, art. 10](https://www.boe.es/buscar/act.php?id=BOE-A-2016-9314).
 
 ## 6. Lo que importa para el proyecto
 
