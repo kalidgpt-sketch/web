@@ -34,3 +34,9 @@ Señales que hacen dudar del proyecto. Cada una con valoración honesta.
 - `[opinión]` Las dos diferencias que el proyecto daba por buenas (idiomas de apoyo y trámite paso a paso) **ya existen**. Sin una ventaja nueva y comprobable, y sin un canal concreto (ONG, academias), la probabilidad de conseguir usuarios es baja.
 - Qué cambiaría esta valoración: que 10–20 personas del público objetivo (p. ej. marroquíes o pakistaníes con poca alfabetización, o profesores de ONG) digan que lo que existe no les sirve y por qué.
 
+## A7. Casi todo el mundo aprueba el CCSE: el problema que quiere resolver la app apenas existe (gravedad: muy alta)
+
+- `[dato]` En 2025 se examinaron 269.080 personas del CCSE ordinario y aprobó más del 98 %; el acumulado 2015–2024 es del 97,09 %. [Cervantes, nov. 2025](https://examenes.cervantes.es/es/noticias/calificaciones-ccse-disponibles-de-noviembre-de-2025); [nota de prensa 06-06-2024](https://cervantes.org/es/sobre-nosotros/sala-prensa/notas-prensa/millon-inscritos-prueba-ccse-obtener-nacionalidad-espanola)
+- `[dato]` En cambio, el DELE A2 lo aprueba un ~66–73 % según la convocatoria, y el CCSE para no alfabetizados un ~72–75 %.
+- `[opinión]` Una app centrada en el CCSE resuelve un problema que casi nadie tiene, y la urgencia (lo que según `AGENTS.md` «vende») se diluye. Donde hay suspensos de verdad es en el DELE A2 y en las personas con poca alfabetización. Es la alerta más importante de esta investigación y debería decidir el rumbo mañana.
+
