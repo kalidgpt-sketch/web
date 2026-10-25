@@ -28,3 +28,9 @@ Señales que hacen dudar del proyecto. Cada una con valoración honesta.
 - `[dato]` En 2025 hubo 24.910 denegaciones de nacionalidad por residencia; entre los motivos, ausencias que rompen la residencia continuada y antecedentes. [Estadística del Ministerio a 30-09-2026](https://www.mjusticia.gob.es/es/Ciudadano/Nacionalidad/Documents/Estadisticas%20nacionalidad%2030-09-2026.pdf); [STS 4606/2016](https://www.poderjudicial.es/search/openDocument/326f15f945f67910)
 - `[opinión]` La guía del trámite es de lo más útil que puede ofrecer la app, pero no puede presentarse como asesoramiento. Necesita aviso visible, enlaces a la norma, fecha de verificación en cada paso y, idealmente, revisión por un abogado o una ONG de extranjería antes de publicarla.
 
+## A6. Mercado saturado: ya hay idiomas de apoyo y guías del trámite (gravedad: alta)
+
+- `[dato]` Al menos 8 productos ofrecen las 300 preguntas oficiales, casi todos gratis. Kavrella traduce a 12 idiomas, otras apps tienen interfaz en árabe y CiviqPass vende un «Pack Expediente» (29 €) que gestiona los documentos y plazos del trámite. Ver `investigacion/competencia.md`.
+- `[opinión]` Las dos diferencias que el proyecto daba por buenas (idiomas de apoyo y trámite paso a paso) **ya existen**. Sin una ventaja nueva y comprobable, y sin un canal concreto (ONG, academias), la probabilidad de conseguir usuarios es baja.
+- Qué cambiaría esta valoración: que 10–20 personas del público objetivo (p. ej. marroquíes o pakistaníes con poca alfabetización, o profesores de ONG) digan que lo que existe no les sirve y por qué.
+
