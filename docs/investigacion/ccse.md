@@ -23,7 +23,7 @@ Etiquetas: `[dato]` (con fuente), `[estimación]` (con razonamiento), `[opinión
 | Nota para aprobar | 15 aciertos de 25 (60 %). Los fallos no restan. Resultado: APTO / NO APTO | `[dato]` [Idiomes UPF (centro de examen)](https://www.upf.edu/web/idiomesupf/ccse). No lo he encontrado ya en la web del Cervantes (en transición) → **PENDIENTE DE VERIFICAR en fuente del Cervantes** cuando publique su web nueva. |
 | Variedad de lengua | Español peninsular contemporáneo | `[dato]` UV FAQ |
 | Edad mínima | 16 años | `[dato]` UV FAQ |
-| Validez del certificado | 4 años desde la aprobación del acta de calificación | `[dato]` UV FAQ. Fuente secundaria (centro de examen); **PENDIENTE DE VERIFICAR en el Cervantes**. |
+| Validez del certificado | 4 años desde la aprobación del acta de calificación | `[dato]` [Orden JUS/1625/2016, art. 10.4](https://www.boe.es/buscar/act.php?id=BOE-A-2016-9314) («4 años a contar desde la fecha del certificado») y UV FAQ |
 | Revisión de calificaciones | Un mes natural desde la publicación, por la sede electrónica del Cervantes | `[dato]` UV FAQ |
 | Adaptaciones | Hay medidas para personas con discapacidad | `[dato]` RD 1004/2015 art. 6.7; UV FAQ |
 

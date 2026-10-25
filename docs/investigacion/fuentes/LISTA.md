@@ -17,3 +17,9 @@ No se guardan los PDF en el repo (el repo es probablemente público y son para c
 | Información nacionalidad (documentos, tasa 104,05 €, ESO) | Ministerio de Justicia | https://www.mjusticia.gob.es/es/ciudadania/nacionalidad/informacion-nacionalidad | 2026-10-25 |
 | Nacionalidad por residencia (tasa, jura ante notario) | Ministerio de Justicia | https://www.mjusticia.gob.es/es/ciudadania/nacionalidad/que-es-nacionalidad/como-adquiere-nacionalidad/residencia | 2026-10-25 |
 | DELE: precios y fechas 2026 (centro de examen) | Universitat de València | https://www.uv.es/uvweb/servicio-politica-linguistica/es/certificacion-idiomas/dele-espanol-1286003215548.html | 2026-10-25 |
+| Código Civil, arts. 21–24 (consolidado) | BOE | https://www.boe.es/buscar/act.php?id=BOE-A-1889-4763 | 2026-10-25 |
+| Datos estadísticos básicos de nacionalidad a 30/09/2026 (PDF) | Ministerio de Justicia | https://www.mjusticia.gob.es/es/Ciudadano/Nacionalidad/Documents/Estadisticas%20nacionalidad%2030-09-2026.pdf | 2026-10-25 (vía Exa) |
+| Sede electrónica: nacionalidad por residencia | Ministerio de Justicia | https://sede.mjusticia.gob.es/tramites/nacionalidad-espanola | 2026-10-25 (vía Exa) |
+| Instrucción DGRN de 26-07-2007 (legalización, buena conducta, integración) | BOE | https://www.boe.es/buscar/pdf/2007/BOE-A-2007-15112-consolidado.pdf | 2026-10-25 (fragmento) |
+| STS 4606/2016 (residencia continuada, antecedentes caducados) | CENDOJ / Poder Judicial | https://www.poderjudicial.es/search/openDocument/326f15f945f67910 | 2026-10-25 |
+| Preguntas frecuentes del Área de Nacionalidad (PDF) | Ministerio de Justicia | https://www.mjusticia.gob.es/es/Ciudadano/Nacionalidad/Documents/FAQS_area_Nacionalidad.pdf | pendiente de leer |

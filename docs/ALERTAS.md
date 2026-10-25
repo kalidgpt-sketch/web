@@ -23,3 +23,8 @@ Señales que hacen dudar del proyecto. Cada una con valoración honesta.
 - `[dato]` El DELE A2 tiene 4 pruebas (lectura, audición, escritura y oral), con examinadores para la escritura y el oral; aprobar exige 30/50 en cada grupo. [Guía DELE A2 v2020](https://examenes.cervantes.es/sites/default/files/DELE_A2_v2020_Gu%C3%ADa_de_examen_0.pdf)
 - `[opinión]` Prepararlo bien exige contenido propio (textos, audios, corrección), mucho más caro que el CCSE, y choca con el alcance de `AGENTS.md` («fuera: curso de español desde cero»). Además, los nacionales de 20 países hispanohablantes están exentos. Recomiendo dejarlo fuera de la versión 1, salvo una guía informativa.
 
+## A5. Información legal: un error puede perjudicar de verdad a alguien (gravedad: alta)
+
+- `[dato]` En 2025 hubo 24.910 denegaciones de nacionalidad por residencia; entre los motivos, ausencias que rompen la residencia continuada y antecedentes. [Estadística del Ministerio a 30-09-2026](https://www.mjusticia.gob.es/es/Ciudadano/Nacionalidad/Documents/Estadisticas%20nacionalidad%2030-09-2026.pdf); [STS 4606/2016](https://www.poderjudicial.es/search/openDocument/326f15f945f67910)
+- `[opinión]` La guía del trámite es de lo más útil que puede ofrecer la app, pero no puede presentarse como asesoramiento. Necesita aviso visible, enlaces a la norma, fecha de verificación en cada paso y, idealmente, revisión por un abogado o una ONG de extranjería antes de publicarla.
+
