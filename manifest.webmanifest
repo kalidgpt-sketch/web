@@ -1,0 +1,14 @@
+{
+  "name": "Dalil · CCSE بالعربية",
+  "short_name": "Dalil",
+  "description": "تدرّب على امتحان الجنسية الإسبانية CCSE مع شرح بالعربية.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "practicar.html",
+  "display": "standalone",
+  "background_color": "#f4f6f5",
+  "theme_color": "#0f6b4f",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
